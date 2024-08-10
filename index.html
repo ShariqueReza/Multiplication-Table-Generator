@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Project_2</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div style="margin-left:470px; margin-top: 70px; font-weight: bold;">Multiplication Table 
+    <div style="margin-top: 15px; margin-left: -70px;">
+      <input class="table_of" type="text" placeholder="Table of" id="tableno">
+      <input class="steps_upto" type="text" placeholder="Steps upto" id="stepsno" >
+      <button class="generate-button">
+        Generate Table
+      </button>
+      <div class="show">
+
+      </div>
+    </div>
+  </div>  
+   
+
+    <script>
+      const button_element=document.querySelector('.generate-button');
+      button_element.addEventListener('click', () =>{
+        let n1=document.getElementById('tableno').value;
+        let n2=document.getElementById('stepsno').value;
+        const show=document.querySelector('.show');
+        show.innerHTML=null;
+        for (let i=1; i<=n2; i++){
+          let result=(n1 + "x" + i + "=" + n1*i) + "<br />";
+          show.innerHTML=show.innerHTML+result;
+        }
+        
+      });
+
+    
+    </script>
+  </div>
+</body>
+</html>
